@@ -1,9 +1,18 @@
-h3{
+body{
+   background: blueviolet;
+}
+h1{
     text-align: center;
 }
 .center{
-display:block;
-margin: 0px auto;
-width: 50%;
-border-radius: 50%;
+    display:block;
+    margin: 15px auto;
+    width: 50%;
+    height:60px;
+    max-width: 80px;
+    border-radius: 50%;
+    }
+
+.cover{
+    text-align: center;
 }
