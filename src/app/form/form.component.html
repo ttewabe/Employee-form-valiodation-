@@ -1,13 +1,16 @@
 
-<body>
+
 <div class="container">
     <h1>User registration</h1>
     <img src="/assets/logo.png" class="center">
-    <form>
-        <div class="cover">
+    <form #login="ngForm" >
         <div class="form-group">
-            <label for='firstname'>FirstName</label> <br>
-            <input type='text' name='firstname' class='form-control'>
+            <label for="firstname">FirstName</label> <br>
+            <input  #name = "ngModel" required minlength=2 maxlength= 7 type="text" name="firstname" class="form-control" ngModel>
+            <!-- <div *ngIf = "name.touched && name.invalid" class = "alert alert-danger"> Hello
+                <p *ngIf = " name.errors.required "> FirstName Required!</p>
+                <p *ngIf = " name.errors.minlength "> Sorry Short User name!</p>
+            </div> -->
         </div>
 
 
@@ -29,8 +32,5 @@
         </div>
         <pre></pre>
         <button class="btn btn-primary" type="submit">Submit</button>
-    </div>
     </form>
-
 </div>
-</body>
